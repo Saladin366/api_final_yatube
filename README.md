@@ -1,10 +1,12 @@
-# Учебный проект "API для Yatube"
+# Учебный проект "API для Yatube".
 
 ## API для вымышленной социальной сети "Yatube".
 
-API позволяет авторизованным пользователям создавать, редактировать, удалять
-записи (посты), писать комментарии к постам, а также подписываться на авторов
-публикаций.
+API даёт возможность добавления новых пользователей, позволяет создавать,
+редактировать, удалять записи (посты), писать комментарии к постам, а также
+подписываться на авторов публикаций.
+
+Проект реализован на Django REST Framework.
 
 ## Как запустить проект:
 
@@ -25,12 +27,13 @@ python3 -m venv venv
 ```
 
 ```
-source venv/Scripts/activate (Mac)
-source venv/bin/activate (Mac)
+source venv/Scripts/activate
 ```
 
+или
+
 ```
-python3 -m pip install --upgrade pip
+source venv/bin/activate
 ```
 
 Установить зависимости из файла requirements.txt:
@@ -42,6 +45,10 @@ pip install -r requirements.txt
 Выполнить миграции:
 
 ```
+cd yatube_api
+```
+
+```
 python3 manage.py migrate
 ```
 
@@ -49,4 +56,10 @@ python3 manage.py migrate
 
 ```
 python3 manage.py runserver
+```
+
+## Документация к API:
+
+```
+http://127.0.0.1:8000/redoc/
 ```
